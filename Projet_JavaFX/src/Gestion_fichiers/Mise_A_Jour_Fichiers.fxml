@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="688.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gestion_fichiers.Mise_A_JourController">
+   <children>
+      <Pane prefHeight="122.0" prefWidth="1006.0" style="-fx-background-color: #F0E68C;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="34.0" layoutY="17.0" prefHeight="88.0" prefWidth="791.0" text="Mise à Jour des Fichiers Favoris." textFill="#cd7f32">
+               <font>
+                  <Font name="Bookman Old Style" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="tableModif" layoutY="122.0" prefHeight="450.0" prefWidth="720.0" AnchorPane.bottomAnchor="115.60000000000002" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="122.0">
+        <columns>
+          <TableColumn fx:id="tag" onEditCommit="#changerTag" prefWidth="120.80006408691406" text="Tags" />
+          <TableColumn fx:id="titre" onEditCommit="#changerTitre" prefWidth="135.999966442585" text="Titre" />
+            <TableColumn fx:id="auteur" onEditCommit="#changerAuteur" prefWidth="119.20001220703125" text="Auteur" />
+            <TableColumn fx:id="res" onEditCommit="#changerRes" prefWidth="149.60000610351562" text="Résumé" />
+            <TableColumn fx:id="com" onEditCommit="#changerComm" prefWidth="192.0" text="Commentaire" />
+        </columns>
+      </TableView>
+      <Button layoutX="675.0" layoutY="633.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="60.0" prefWidth="190.0" text="Supprimer." AnchorPane.bottomAnchor="17.0" AnchorPane.rightAnchor="15.0">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/trash.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="385.0" layoutY="611.0" mnemonicParsing="false" onAction="#enregistrer" prefHeight="60.0" prefWidth="189.0" text="Enregistrer tableau" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="385.0" AnchorPane.rightAnchor="385.4">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/rotate.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="14.0" layoutY="611.0" mnemonicParsing="false" onAction="#annuler" prefHeight="60.0" prefWidth="189.0" text="Annuler." AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="14.0">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/cancel.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="14.0" layoutY="580.0" prefHeight="18.0" prefWidth="798.0" text="*Important: Sachez que vous pouvez modifier vos informations sur les fichiers en cliquant 2 fois sur le champ à modifier." textFill="#b20000" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="14.0" />
+      <TextArea fx:id="url" editable="false" layoutX="745.0" layoutY="328.0" prefHeight="132.0" prefWidth="200.0" promptText="URL complet..." wrapText="true" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="328.0" />
+      <Button layoutX="787.0" layoutY="282.0" mnemonicParsing="false" onAction="#AffichageURL" prefHeight="36.0" prefWidth="125.0" text="Affichier URL" AnchorPane.rightAnchor="47.400000000000006" AnchorPane.topAnchor="282.0" />
+   </children>
+</AnchorPane>

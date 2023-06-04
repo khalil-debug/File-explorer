@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gestion_fichiers.LoginController">
+   <children>
+      <Pane prefHeight="82.0" prefWidth="567.0" style="-fx-background-color: #B796AC;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="144.0" layoutY="9.0" prefHeight="64.0" prefWidth="280.0" text="Identification" textFill="#2d4069">
+               <font>
+                  <Font name="Book Antiqua" size="36.0" />
+               </font>
+            </Label>
+            <Separator layoutX="144.0" layoutY="66.0" prefHeight="4.0" prefWidth="280.0" />
+            <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="67.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/login.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <HBox layoutY="82.0" prefHeight="297.0" prefWidth="567.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0">
+         <children>
+            <Pane prefHeight="280.0" prefWidth="386.0" style="-fx-background-color: #EFEFF0;">
+               <children>
+                  <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="14.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/membership.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="14.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/password.png" />
+                     </image>
+                  </ImageView>
+                  <Hyperlink layoutX="125.0" layoutY="197.0" prefHeight="28.0" prefWidth="151.0" text="Mot de passe oublié?" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Hyperlink>
+                  <JFXPasswordField fx:id="mdp" focusColor="#dbdee5" labelFloat="true" layoutX="77.0" layoutY="105.0" prefHeight="25.0" prefWidth="280.0" promptText="Mot De Passe..." unFocusColor="#cdbfbf" />
+                  <JFXTextField fx:id="nom" focusColor="#b6b9bf" labelFloat="true" layoutX="77.0" layoutY="45.0" prefHeight="25.0" prefWidth="280.0" promptText="Nom d'utilisateur..." unFocusColor="#aca1a1" />
+                  <JFXButton blendMode="MULTIPLY" layoutX="43.0" layoutY="239.0" onAction="#login" prefHeight="39.0" prefWidth="98.0" ripplerFill="#3c6f52" style="-fx-background-color: #68EDC6;" text="S'identifier." wrapText="true" />
+                  <JFXButton layoutX="259.0" layoutY="239.0" onAction="#Quitter" prefHeight="39.0" prefWidth="98.0" ripplerFill="#772626" style="-fx-background-color: #CE6D8B;" text="Quitter." />
+                  <Label fx:id="label" layoutX="13.0" layoutY="149.0" prefHeight="23.0" prefWidth="360.0" textFill="RED">
+                     <font>
+                        <Font size="11.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="287.0" prefWidth="214.0" style="-fx-background-color: #D2D5DD;">
+               <children>
+                  <Label alignment="CENTER" layoutY="182.0" prefHeight="39.0" prefWidth="214.0" text="Vous n'avez pas de compte?" textFill="#798071" />
+                  <Hyperlink layoutX="78.0" layoutY="221.0" onAction="#Sign_up" text="S'inscrire." />
+                  <ImageView fitHeight="182.0" fitWidth="182.0" layoutX="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/folder%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
